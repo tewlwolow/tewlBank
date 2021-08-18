@@ -100,13 +100,17 @@ class BankAccount
 	 * Define method for error handling
 	 * Receives scanner object from main loop
 	 * Returns amount if entered correctly
+	 * No logging cuz it's a really really really simple test programme
 	 */
 	public int checkInputAmount(Scanner scanner)
 	{
 		int amount = 0;
-        try {
+        try
+        {
             amount = scanner.nextInt();
-        } catch (InputMismatchException e) {
+        }
+        catch (InputMismatchException e)
+        {
             System.out.println("Invalid amount. Try again.");
         }
         
